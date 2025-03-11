@@ -24,6 +24,26 @@ jobs:
      run: |
       npm run test
       ls -lart
+ deploy:
+  runs-on: ubuntu-latest
+  steps:
+   - name: checkout code
+     uses: actions/checkout@v4
+     
+   - name: Installation NodeJS
+     uses: actions/setup-node@v4
+     with:
+      node-version: 22
+      
+   - name: installing dependency
+     shell: bash
+     run: |
+      npm ci
+   - name: build the project
+     shell: bash
+     run: |
+      npm run build
+      echo "deploying the application"
    
 
 
