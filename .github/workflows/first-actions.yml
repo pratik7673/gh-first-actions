@@ -43,6 +43,7 @@ jobs:
      shell: bash
      run: |
       npm run build
+      ls -lart
       echo "deploying the application"
    
 
