@@ -1,13 +1,12 @@
-name: CI/CD Pipeline
-
+name: CI/CD pipeline
 on: workflow_dispatch
+
 jobs:
-  first_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: print greetings
-        shell: pwsh
-        run: |
-         Write-Host "this is the first individual workflows"
-         Write-Host "you can do it Pratik, go ahead and conqure it"
-  
+ killgrave:
+   runs-on: ubuntu-latest
+
+   steps:
+     - name: first write-host command
+       shell: pwsh
+       run: |
+        write-host "test this script pratik"
