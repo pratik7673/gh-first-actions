@@ -25,6 +25,7 @@ jobs:
       npm run test
       ls -lart
  deploy:
+  needs: first_action
   runs-on: ubuntu-latest
   steps:
    - name: checkout code
