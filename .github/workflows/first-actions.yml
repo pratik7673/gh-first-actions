@@ -1,10 +1,16 @@
-name: First Workflow
-on: workflow_dispatch
+name: CI/CD Pipeline
+on:
+ push:
+  branches: main
+
 jobs:
-  first-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print greeting
-        run: echo "Hello World!"
-      - name: Print goodbye
-        run: echo "Done - bye!"
+ first_action:
+  runs-on: ubuntu-latest
+  steps:
+   - name: checkout code
+     uses: actions/checkout@v4
+   - name: display the content
+     shell: bash
+     run: |
+      ls -lart
+ 
