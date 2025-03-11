@@ -1,12 +1,11 @@
 name: CI/CD pipeline
 on: workflow_dispatch
-
 jobs:
- killgrave:
-   runs-on: ubuntu-latest
-
-   steps:
-     - name: first write-host command
-       shell: pwsh
-       run: |
-        write-host "test this script pratik"
+ step-first:
+  runs-on: ubuntu-latest
+  steps:
+   - name: test the pipe
+     shell: pwsh
+     run: | 
+      Write-Host "test the pipe"
+      pwsh --version
