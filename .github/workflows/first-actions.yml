@@ -15,12 +15,17 @@ jobs:
      with:
       node-version: 22
       
-   - name: display the content
+   - name: installing dependency
      shell: bash
      run: |
+      npm ci
+   - name: executing test
+     shell: bash
+     run: |
+      npm run test
       ls -lart
-      node -v 
-      npm -v
+   
+
 
      
  
