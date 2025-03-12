@@ -1,0 +1,12 @@
+name: output informaiton
+on: [workflow_dispatch]
+
+jobs:
+  information:
+   runs-on: [ubuntu-latest]
+   steps:
+     - name: Information displayed
+       shell: bash
+       run: |
+        echo "${{ github.run_id }}"
+        echo "${{ toJSON(github) }}"
